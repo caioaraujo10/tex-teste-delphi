@@ -1,0 +1,94 @@
+﻿interface
+ 
+type Transporte = class
+
+private
+ 
+Fnome   :String;
+ 
+Fmetros  :Integer;
+
+procedure Setnome(const Value: String);
+ 
+procedure Setmetros(const Value: Integer);
+
+public
+
+property nome   :String  read Fnome   write Fnome;
+ 
+property metros  :Integer read Fmetros  write Fmetros;
+
+Constructor Create;    // declaração do metodo construtor
+ 
+Destructor  Destroy; Override; // declaração do metodo destrutor
+
+ 
+function move(metros :Integer ):Integer;
+ 
+end;
+ 
+implementation
+ 
+{ Tpessoa }
+ 
+constructor Transporte.Create;
+ 
+begin
+ 
+// metodo contrutor
+ 
+end;
+ 
+destructor Transporte.Destroy;
+ 
+begin
+ 
+// metodo destrutor
+ 
+inherited;
+ 
+end;
+
+function move(metros :Integer ):Integer;
+ ShowMessage(''nome' move +IntToStr(metros)';
+end;
+
+
+
+
+
+type Carro = class(Transporte)
+
+private
+
+function move(metros :Integer ):Integer; :overload;
+ Fmetros :100;
+end;
+
+end;
+
+
+
+type Aviao = class(Transporte)
+
+private
+
+function move(metros :Integer ):Integer; :overload;
+ Fmetros :2500;
+end;
+
+
+class Program {
+	
+	static void Main(strings[] args){
+
+			Avião boeing = new Aviao;
+			Carro porsche = new Carro;
+
+			boeing.move();
+			porsche.move();
+
+	}
+
+
+}
